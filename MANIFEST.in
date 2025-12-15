@@ -1,0 +1,32 @@
+# 只包含必要的文件到发行包中
+include README.md
+include LICENSE
+include pyproject.toml
+
+# 递归包含 scmiac 包中的所有文件
+recursive-include scmiac *.py
+
+# 排除所有不需要的目录
+prune scripts
+prune data
+prune test
+prune demo
+prune docs
+prune figs
+prune figures
+prune logs
+prune manuscript
+prune output
+prune plots
+prune sbatch
+prune supfig
+prune tables
+prune vis_scripts
+prune tmp
+
+# 排除开发相关文件
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.so

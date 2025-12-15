@@ -1,0 +1,27 @@
+# 白名单模式：默认忽略所有文件，只追踪明确列出的目录和文件
+
+# 忽略根目录下的所有内容
+/*
+
+# 不忽略以下目录和文件
+!.gitignore
+!LICENSE
+!README.md
+!pyproject.toml
+!MANIFEST.in
+!scmiac/
+!scripts/
+!docs/
+!figs/
+
+# 在 scmiac 和 scripts 目录内，忽略以下内容
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.so
+**/.ipynb_checkpoints
+**/*.log
+**/.DS_Store
+**/*.swp
+**/*.swo
+**/*~
